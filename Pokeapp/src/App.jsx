@@ -6,14 +6,13 @@ import SearchResult from './components/SearchResult';
 import Teams from './components/Teams';
 import Type from './components/Type';
 import SearchBar from './components/SearchBar';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router>
-      <header>
-        <h1>Pokédex</h1>
-        <SearchBar /> 
-      </header>
+        <Header />
+        <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teams" element={<Teams />} />
