@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from './Header';
 
 function Pokemon() {
     const { pokemon } = useParams(); // This retrieves the Pokémon name from the URL
@@ -44,7 +45,6 @@ function Pokemon() {
                     </li>
                 ))}
             </ul>
-
             <h2>Abilities</h2>
             <ul>
                 {pokemonDetails.abilities.map((ability) => (
