@@ -10,7 +10,7 @@ const teams = [
 function Teams() {
   return (
     <div>
-      <h1>Teams</h1>
+      <h1>Teamsss</h1>
       {teams.map(team => (
         <div key={team.id}>
           <h2>{team.name}</h2>
@@ -21,4 +21,4 @@ function Teams() {
   );
 }
 
-export default Teams;
+export default Teams; 
