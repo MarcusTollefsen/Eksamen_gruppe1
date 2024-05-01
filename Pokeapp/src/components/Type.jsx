@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import  { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import "../styles/type/type.scss";
 
 function Type() {
   const { type } = useParams();
   const [pokemons, setPokemons] = useState([]);
+  const [iconUrl, setIconUrl] = useState("");
 
   useEffect(() => {
     async function fetchPokemonsByType() {
@@ -18,27 +20,44 @@ function Type() {
         );
         setPokemons(pokemonDetails);
       } catch (error) {
-        console.error('Failed to fetch pokemons by type:', error);
+        console.error("Failed to fetch pokemons by type:", error);
         setPokemons([]);
       }
     }
     fetchPokemonsByType();
+
+    const iconPath = `../icons/${type.toLowerCase()}.png`;
+    importIcon(iconPath);
   }, [type]);
 
+  const importIcon = async (iconPath) => {
+    try {
+      const icon = await import(iconPath);
+      setIconUrl(icon.default);
+    } catch (error) {
+      console.error("Failed to import icon:", error);
+    }
+  };
+
   return (
-    <div>
-      <h1>{type.toUpperCase()} Type Pokemons</h1>
-      <div>
-        {pokemons.map(pokemon => (
-          <div key={pokemon.id}>
+    <section className="type-container">
+      {iconUrl && (
+        <article className="type-icon">
+          <img src={iconUrl} alt={type} />
+          <p>{type.toUpperCase()}</p>
+        </article>
+      )}
+      <article className= "type-pokemon-list" >
+        {pokemons.map((pokemon) => (
+          <figure key={pokemon.id} className={`pokemon-card ${type}`}>
             <Link to={`/pokemons/${pokemon.name}`}>
-              <p>{pokemon.name}</p>
               <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+              <p>{pokemon.name.toUpperCase()}</p>
             </Link>
-          </div>
+          </figure>
         ))}
-      </div>
-    </div>
+      </article>
+    </section>
   );
 }
 

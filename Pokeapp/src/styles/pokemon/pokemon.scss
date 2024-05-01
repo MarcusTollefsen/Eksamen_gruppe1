@@ -1,0 +1,72 @@
+.pokemon-site-continer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pokemon-image-site img {
+  width: 300px;
+  height: 300px;
+}
+.pokemon-type-image-site img {
+  width: 60px;
+  height: 60px;
+}
+.pokemon-type-image-site div img {
+  display: inline;
+}
+.pokemon-site-continer h2 {
+  padding-top: 40px;
+}
+.pokemon-type-image-site ul   {
+    list-style: none;
+    padding-left: 0;
+   
+}
+
+/* Generell stil for nettsiden */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styling for større skjermer (desktop) */
+  @media screen and (min-width: 768px) {
+    .pokemon-site-continer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px; /* Legg til litt avstand mellom grid-elementer */
+    }
+  
+    .pokemon-image {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center; /* Sentrer bildet horisontalt */
+      align-items: center; /* Sentrer bildet vertikalt */
+    }
+  
+    .pokemon-image img {
+      max-width: 100%; /* La bildet skalere ned for å passe innenfor forelderens bredde */
+      max-height: 100%; /* La bildet skalere ned for å passe innenfor forelderens høyde */
+      object-fit: contain; /* Behold bildets proporsjoner og plasser det innenfor containeren */
+    }
+  }
+  
+  /* Styling for mindre skjermer (mobil) */
+  @media screen and (max-width: 767px) {
+    .pokemon-site-continer {
+      display: block; /* Endre layouten til blokk for mindre skjermer */
+    }
+  
+    .pokemon-image {
+      width: 100%; /* Bildet fyller hele bredden av containeren */
+      height: auto; /* Juster høyden proporsjonalt */
+    }
+  
+    .pokemon-image img {
+      width: 100%; /* Fyll hele bredden av bildet */
+      height: auto; /* Juster høyden proporsjonalt */
+    }
+  }
+  

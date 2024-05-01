@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PokeCard from './PokeCard';
 import TypeCard from './TypeCard';
 
@@ -28,21 +28,28 @@ function Home() {
     }, []);
 
     return (
-        <div>
-            <section>
+        <>
+        <div className='home-container'>
+            <section className='main-pokemon'>
                 <h1>Main Pokemons</h1>
-                <div>
+                <div className='pokemon-list'>
                     {pokemons.map(pokemon => <PokeCard key={pokemon.id} pokemon={pokemon} />)}
                 </div>
             </section>
-            <section>
+            <section className='main-type'>
                 <h1>Pokémon Types</h1>
-                <div>
-                    {types.map(type => <TypeCard key={type.name} type={type.name} imageUrl={type.url} />)}
+                <div className='type-list'>
+                    {types.map(type => <TypeCard key={type.name}
+                            type={type.name}
+                            className={type.name.toLowerCase()} />)}
                 </div>
             </section>
         </div>
+        </>
     );
 }
 
 export default Home;
+
+
+

@@ -1,14 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
+import "../styles/header/header.scss";
+import SearchBar from "./SearchBar";
 function Header() {
-    return (
-        <button style={{ backgroundColor: '#f8f8f8', padding: '10px 20px' }}>
-            <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-                <h1>Pokédex</h1>
-            </Link>
-        </button>
-    );
+  return (
+    <header>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">
+            <h1>Pokédex</h1>
+          </Link>
+        </li>
+        <li>
+          <Link to="/teams">
+            <h1>Teams</h1>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+    <SearchBar />
+  </header>
+  
+
+  );
 }
 
 export default Header;
