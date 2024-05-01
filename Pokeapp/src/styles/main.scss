@@ -25,10 +25,10 @@ $fairy-color: #f9dbf6;
 body {
     max-width: 1200px;
     margin: 0 auto;
-     padding: 0 20px;
+    padding: 0 5px;
     background-color: #ffffff;
     font-family: 'Mulish', sans-serif;
-    
+
 }
 
 @media screen and (min-width: 768px) {
@@ -46,13 +46,13 @@ body {
         text-align: center;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 20px;
+        padding: 10px;
         background-color: #f0f0f0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
-        font-size: 25px ;
+        font-size: 25px;
         font-weight: bold;
-        
+
     }
 
     .pokemon-card:hover {
@@ -60,8 +60,8 @@ body {
     }
 
     .pokemon-image-card img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
     }
 
@@ -73,6 +73,7 @@ body {
         justify-content: center;
         text-align: center;
     }
+
     .pokemon-card a {
         text-decoration: none;
     }
@@ -90,7 +91,7 @@ body {
         text-align: center;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 5px ;
+        padding: 5px;
         margin: 5px;
         background-color: #f0f0f0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -105,12 +106,44 @@ body {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
+
     .type-card a {
         text-decoration: none;
     }
+
+    .search-bar-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-bar-form input[type="text"] {
+        padding: 10px;
+        font-size: 25px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 400px;
+    }
+
+    .search-bar-form button {
+        padding: 15px 16px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .search-bar-form button:hover {
+        background-color: #0056b3;
+        
+    }
+
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+
     .pokemon-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -119,12 +152,12 @@ body {
 
     .pokemon-card {
         margin-bottom: 20px;
-       
+
     }
 
     .pokemon-image-card img {
         width: 100%;
-        
+
         height: auto;
     }
 
@@ -146,13 +179,13 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        
+
     }
 
     .type-card img {
         width: 40px;
         height: 40px;
-        
+
     }
 
     .type-card {
@@ -168,77 +201,43 @@ body {
         background-color: #f0f0f0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .type-card a {
         text-decoration: none;
     }
+
+    .search-bar-form {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .search-bar-form input[type="text"] {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+    }
+
+    .search-bar-form button {
+        padding: 8px 16px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .search-bar-form button:hover {
+        background-color: #0056b3;
+       
+    }
 }
 
-/* Home.css 
 
-.pokemon-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .pokemon-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .pokemon-image-card img {
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%;
-  }
-  
-  .pokemon-info h4 {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
- 
-  .main-pokemon, .type-pokemon {
-    width: 100%; 
-  }
-  
-  .pokemon-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-  }
-
-
-  .type-card  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 5px;
-    margin: 5px;
-    background-color: #f0f0f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .type-card img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .type-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-
-  }
-*/
 .normal {
     background-color: $normal-color;
 }
