@@ -1,18 +1,18 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import Home from './components/Home';
 import Pokemon from './components/Pokemon';
 import SearchResult from './components/SearchResult';
 import Teams from './components/Teams';
 import Type from './components/Type';
-import SearchBar from './components/SearchBar';
-import Header from './components/Header';
+import './styles/main.scss';
 
 function App() {
   return (
     <Router>
-        <Header />
-        <SearchBar />
+      <Header/>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teams" element={<Teams />} />

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Mulish:wght@400;700&display=swap');
+
+
+
+/* header.scss */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #73d670f6;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  display: inline;
+}
+
+header h1 + ul li:first-child {
+  margin-left: 20px; 
+}

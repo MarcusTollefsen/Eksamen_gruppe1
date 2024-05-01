@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 const teams = [
@@ -10,7 +10,7 @@ const teams = [
 function Teams() {
   return (
     <div>
-      <h1>Teamsss</h1>
+      <h1>Teams</h1>
       {teams.map(team => (
         <div key={team.id}>
           <h2>{team.name}</h2>

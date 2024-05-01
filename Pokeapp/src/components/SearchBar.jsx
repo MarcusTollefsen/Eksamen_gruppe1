@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import {useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function SearchBar() {
@@ -11,7 +11,7 @@ function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form className='search-bar-form' onSubmit={handleSearch}>
       <input
         type="text"
         placeholder="Search Pokémon..."
