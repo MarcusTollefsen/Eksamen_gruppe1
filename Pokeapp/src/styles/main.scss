@@ -39,7 +39,10 @@ body {
         gap: 15px;
         
     }
-
+    .pokemon-list img {
+        width: 150px;
+        height: 150px;
+    }
     .pokemon-card {
         display: flex;
         flex-direction: column;
@@ -48,7 +51,7 @@ body {
         text-align: center;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 50px;
+        padding: 30px;
         background-color: #f0f0f0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
@@ -63,8 +66,8 @@ body {
     }
 
     .pokemon-image-card img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
     }
 
