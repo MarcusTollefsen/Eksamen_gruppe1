@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function TypeCard({ type, className }) {
+function TypeCard({type, className }) {
   const [iconUrl, setIconUrl] = useState(null);
 
   useEffect(() => {
