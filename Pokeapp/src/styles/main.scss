@@ -37,6 +37,7 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        
     }
 
     .pokemon-card {
@@ -87,6 +88,12 @@ body {
     .main-pokemon,
     .type-pokemon {
         width: 100%;
+        
+    }
+    .main-pokemon h1,
+    .main-type h1 {
+        padding-left: 40px;
+        
     }
 
     .type-card {

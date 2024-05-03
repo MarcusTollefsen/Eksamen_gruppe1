@@ -36,18 +36,18 @@ function Home() {
 
   return (
     <>
-      <div className="home-container">
+      <main className="home-container">
         <section className="main-pokemon">
           <h1>Main Pokemons</h1>
-          <div className="pokemon-list">
+          <figure className="pokemon-list">
             {pokemons.map((pokemon) => (
               <PokeCard key={pokemon.id} pokemon={pokemon} />
             ))}
-          </div>
+          </figure>
         </section>
         <section className="main-type">
           <h1>Pokémon Types</h1>
-          <div className="type-list">
+          <figure className="type-list">
             {types.map((type) => (
               <TypeCard
                 key={type.name}
@@ -55,9 +55,9 @@ function Home() {
                 className={type.name.toLowerCase()}
               />
             ))}
-          </div>
+          </figure>
         </section>
-      </div>
+      </main>
     </>
   );
 }
