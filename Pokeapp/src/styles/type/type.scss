@@ -1,3 +1,5 @@
+/*type.scss*/
+
 .type-container {
   width: 100%;
 
@@ -49,3 +51,27 @@
   height: 150px;
 
 }
+
+@media screen and (max-width: 768px) {
+
+    .type-icon img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .type-pokemon-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    .type-pokemon-list figure {
+        margin: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+    
+    }
+  }
+
+
+
+
+

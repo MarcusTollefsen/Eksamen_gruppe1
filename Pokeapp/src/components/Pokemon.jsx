@@ -46,52 +46,66 @@ function Pokemon() {
   }
 
   return (
-    <section className="pokemon-site-continer">
-       <article className="pokemon-image-site">
-         <h1>{pokemonDetails.name.toUpperCase()}</h1>
-         <img
-          src={pokemonDetails.sprites.front_default}
-          alt={pokemonDetails.name}
-         />
-         </article>
-      <article className="pokemon-type-image-site">
-        <h2>Types</h2>
-        <ul>
-          {pokemonDetails.types.map((typeInfo) => {
-            const matchingIcon = typeIcons.find(
-              (icon) => icon.type === typeInfo.type.name
-            );
-            return (
-              <li key={typeInfo.type.name}>
-                {matchingIcon && (
-                  <div className={`type ${typeInfo.type.name}`}>
-                    <img src={matchingIcon.iconUrl} alt={typeInfo.type.name} />
-                    {typeInfo.type.name.toUpperCase()}
-                  </div>
-                )}
+    <section className="pokemon-site-container">
+      <header>
+        <h1>{pokemonDetails.name.toUpperCase()}</h1>
+        <figure className={"pokemon-image-site"}>
+          <img
+            src={pokemonDetails.sprites.front_default}
+            alt={pokemonDetails.name}
+          />
+        </figure>
+      </header>
+      <main>
+        <article className="pokemon-type-image-site">
+          <h2>Types</h2>
+          <ul>
+            {pokemonDetails.types.map((typeInfo) => {
+              const matchingIcon = typeIcons.find(
+                (icon) => icon.type === typeInfo.type.name
+              );
+              return (
+                <li
+                  key={typeInfo.type.name}
+                  className={`type ${typeInfo.type.name}`}
+                >
+                  {matchingIcon && (
+                    <figure>
+                      <img
+                        src={matchingIcon.iconUrl}
+                        alt={typeInfo.type.name}
+                      />
+                      {typeInfo.type.name.toUpperCase()}
+                    </figure>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </article>
+
+        <article>
+          <h2>Stats</h2>
+          <ul>
+            {pokemonDetails.stats.map((stat) => (
+              <li key={stat.stat.name}>
+                {stat.stat.name.toUpperCase()}: {stat.base_stat}
               </li>
-            );
-          })}
-        </ul>
-        <h2>Stats</h2>
-        <ul>
-          {pokemonDetails.stats.map((stat) => (
-            <li key={stat.stat.name}>
-              {stat.stat.name.toUpperCase()}: {stat.base_stat}
-            </li>
-          ))}
-        </ul>
-        <h2>Abilities</h2>
-        <ul>
-          {pokemonDetails.abilities.map((ability) => (
-            <li key={ability.ability.name}>
-              {ability.ability.name.toUpperCase()}
-            </li>
-          ))}
-        </ul>
-      </article>
+            ))}
+          </ul>
+        </article>
+        <article>
+          <h2>Abilities</h2>
+          <ul>
+            {pokemonDetails.abilities.map((ability) => (
+              <li key={ability.ability.name}>
+                {ability.ability.name.toUpperCase()}
+              </li>
+            ))}
+          </ul>
+        </article>
+      </main>
     </section>
   );
 }
-
 export default Pokemon;

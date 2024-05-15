@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function TypeCard({ type, className }) {
+function TypeCard({type, className }) {
   const [iconUrl, setIconUrl] = useState(null);
 
   useEffect(() => {
@@ -20,12 +20,12 @@ function TypeCard({ type, className }) {
   }, [type]);
 
   return (
-    <div className={`type-card ${className}`}>
+    <figure className={`type-card ${className}`}>
       <Link to={`/${type}`}>
         {iconUrl && <img src={iconUrl} alt={type} />}
         <h3>{type}</h3>
       </Link>
-    </div>
+    </figure>
   );
 }
 

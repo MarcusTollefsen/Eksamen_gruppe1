@@ -1,6 +1,7 @@
+/*hovedside + hele app*/
 @import "header/header.scss";
 @import "pokemon/pokemon.scss";
-
+@import "type/type.scss";
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Mulish:wght@400;700&display=swap");
 
 $normal-color: #dce1e6;
@@ -35,9 +36,13 @@ body {
     .pokemon-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 15px;
+        
     }
-
+    .pokemon-list img {
+        width: 150px;
+        height: 150px;
+    }
     .pokemon-card {
         display: flex;
         flex-direction: column;
@@ -46,12 +51,13 @@ body {
         text-align: center;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 10px;
+        padding: 30px;
         background-color: #f0f0f0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
         font-size: 25px;
         font-weight: bold;
+        margin: 0px;
 
     }
 
@@ -60,9 +66,14 @@ body {
     }
 
     .pokemon-image-card img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
+    }
+
+    .pokemon-image-site figure {
+        background-color: #f4eab8;
+
     }
 
     .pokemon-info h4 {
@@ -81,7 +92,9 @@ body {
     .main-pokemon,
     .type-pokemon {
         width: 100%;
+        
     }
+   
 
     .type-card {
         display: flex;
@@ -137,7 +150,7 @@ body {
 
     .search-bar-form button:hover {
         background-color: #0056b3;
-        
+
     }
 
 }
@@ -153,12 +166,13 @@ body {
     .pokemon-card {
         margin-bottom: 20px;
 
+
     }
 
     .pokemon-image-card img {
         width: 100%;
-
         height: auto;
+
     }
 
     .pokemon-info h4 {
@@ -233,7 +247,7 @@ body {
 
     .search-bar-form button:hover {
         background-color: #0056b3;
-       
+
     }
 }
 

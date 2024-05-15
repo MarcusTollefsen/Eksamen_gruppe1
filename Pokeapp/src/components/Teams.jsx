@@ -9,15 +9,15 @@ const teams = [
 
 function Teams() {
   return (
-    <div>
+    <section>
       <h1>Teams</h1>
       {teams.map(team => (
-        <div key={team.id}>
+        <article key={team.id}>
           <h2>{team.name}</h2>
           <Link to={`/teams/${team.slug}`}>View Team</Link>
-        </div>
+        </article>
       ))}
-    </div>
+    </section>
   );
 }
 
